@@ -13,12 +13,24 @@
     
       <ion-item>
         
-        <ion-select [(ngModel)]="place" (ionChange)="Retrievedata();" >
+        <ion-select placeholder="Select Bank Location" [(ngModel)]="place" (ionChange)="Retrievedata();" >
           <ion-select-option value="BANGALORE">Bangalore</ion-select-option>
           <ion-select-option value="MUMBAI">Mumbai</ion-select-option>
           <ion-select-option value="CHENNAI">Chennai</ion-select-option>
         </ion-select>
       </ion-item>
-    </ion-list>    
+    </ion-list>
+    <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+    <br>
+    <br>
+    <ion-card>
+    
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+    </ion-card>
+     </ion-toolbar>   
   </div>
 </ion-content>
