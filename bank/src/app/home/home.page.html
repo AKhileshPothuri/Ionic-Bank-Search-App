@@ -24,12 +24,40 @@
     <ion-searchbar></ion-searchbar>
     <br>
     <br>
-    <ion-card>
+    <ion-card *ngFor="let area of areas">
     
-      <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </ion-card-content>
+      <ion-grid>
+        <ion-row >
+          <ion-col>
+              <span>Bank Name</span>          
+          </ion-col>
+          <ion-col>
+            <div>
+              <div float-right>bank name</div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col>
+              <span>Branch</span>          
+          </ion-col>
+          <ion-col>
+            <div>
+              <div float-right>branch</div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col>
+              <span>IFSC Code</span>          
+          </ion-col>
+          <ion-col>
+            <div>
+              <div float-right>code</div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card>
      </ion-toolbar>   
   </div>
