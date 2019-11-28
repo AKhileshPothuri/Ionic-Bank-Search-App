@@ -8,14 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class HomePage {
   ifsc:string;
-  area:string;
+  place: any;
+ 
   constructor(private http: HttpClient) {
     this.ifsc="";
+ 
   }
-  ionViewWillEnter() {
+  Retrievedata() {
     // Load the data
-this.area="MUMBAI";
-    this.prepareDataRequest(this.area)
+let area=this.place;
+
+    this.prepareDataRequest(area)
       .subscribe(
         data => {
           // Set the data to display in the template

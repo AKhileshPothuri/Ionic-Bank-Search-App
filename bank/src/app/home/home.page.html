@@ -13,10 +13,10 @@
     
       <ion-item>
         
-        <ion-select  placeholder="Select Area">
-          <ion-select-option value="b">BANGALORE</ion-select-option>
-          <ion-select-option value="m">MUMBAI</ion-select-option>
-          <ion-select-option value="c">CHENNAI</ion-select-option>
+        <ion-select [(ngModel)]="place" (ionChange)="Retrievedata();" >
+          <ion-select-option value="BANGALORE">Bangalore</ion-select-option>
+          <ion-select-option value="MUMBAI">Mumbai</ion-select-option>
+          <ion-select-option value="CHENNAI">Chennai</ion-select-option>
         </ion-select>
       </ion-item>
     </ion-list>    
