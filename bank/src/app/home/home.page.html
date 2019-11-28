@@ -24,7 +24,7 @@
     <ion-searchbar></ion-searchbar>
     <br>
     <br>
-    <ion-card *ngFor="let area of areas">
+    <ion-card *ngFor="let bank of banks">
     
       <ion-grid>
         <ion-row >
@@ -33,7 +33,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <div float-right>bank name</div>
+              <div class="ion-float-right">{{bank.bank_name}}</div>
             </div>
           </ion-col>
         </ion-row>
@@ -43,7 +43,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <div float-right>branch</div>
+              <div float-right>{{bank.branch}}</div>
             </div>
           </ion-col>
         </ion-row>
@@ -53,7 +53,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <div float-right>code</div>
+              <div float-right>{{bank.ifsc}}</div>
             </div>
           </ion-col>
         </ion-row>
