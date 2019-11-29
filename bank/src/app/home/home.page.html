@@ -21,7 +21,7 @@
       </ion-item>
     </ion-list>
     
-    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+    <ion-searchbar  [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
     <br>
     <br>
     <ion-card *ngFor="let bank of banks">
