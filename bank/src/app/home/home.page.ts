@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 export class HomePage {
   ifsc:string;
   searchTerm: string ;
-  filteritems:any;
-  place: any;
+  filteritems:string;
+  place: string;
  public banks:any;
   
   constructor(private http: HttpClient) {
@@ -29,16 +29,24 @@ if(area!=null)
           this.banks = data;
           
           console.log(this.banks);
-          this.filterItems= this.banks;
+          
          
         }
       );
   }}
-  filterItems(ev:any) {
-    let val = ev.target.value;
+  setFilteredItems() {
+ 
+    this.banks = this.filterItems(this.searchTerm);
+console.log(this.banks);
+}
+  filterItems(searchTerm:any) {
+    return this.banks.filter((item) => {
+      return item.bank_name.includes(searchTerm);
+  });  
 
-    this.filteritems = this.banks.filter(bank =>  bank.bank_name.toLowerCase().indexOf(val.toLowerCase()) > -1 
-    );}
+}
+  
+ 
   private prepareDataRequest(areas:string): Observable<object> {
     // Define the data URL
     const dataUrl = 'https://vast-shore-74260.herokuapp.com/banks?city='+areas;

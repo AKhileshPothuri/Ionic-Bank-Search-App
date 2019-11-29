@@ -20,11 +20,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    <ion-toolbar>
-    <ion-searchbar showCancelButton animated placeholder="Search" 
-      (ionInput)="filterItems($event);">
-      
-    </ion-searchbar>
+    
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
     <br>
     <br>
     <ion-card *ngFor="let bank of banks">
@@ -62,6 +59,6 @@
         </ion-row>
       </ion-grid>
     </ion-card>
-     </ion-toolbar>   
+        
   </div>
 </ion-content>
