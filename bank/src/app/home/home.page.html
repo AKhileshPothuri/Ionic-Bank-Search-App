@@ -21,7 +21,10 @@
       </ion-item>
     </ion-list>
     <ion-toolbar>
-    <ion-searchbar></ion-searchbar>
+    <ion-searchbar showCancelButton animated placeholder="Search" 
+      (ionInput)="filterItems($event);">
+      
+    </ion-searchbar>
     <br>
     <br>
     <ion-card *ngFor="let bank of banks">
